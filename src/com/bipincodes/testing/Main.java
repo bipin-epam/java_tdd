@@ -42,7 +42,7 @@ public class Main {
             receiverAddress = readInputWithMsg("Enter the value for address in format: example@mail.com;example@mail.com;example@mail.com");
             if(receiverAddress == null) break;
 
-            messenger.sendMessage(new Client(receiverAddress , tags), new Template());
+            messenger.sendMessage(new Client(receiverAddress , tags), new Template(template));
         }
 
         System.out.println("Program completed, press 'enter' to exit");

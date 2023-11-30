@@ -14,7 +14,10 @@ public class Messenger {
     public void sendMessage(Client client, Template template) {
         String messageContent =
                 templateEngine.generateMessage(template, client);
+        System.out.println("Below is the generated message that will be sent...");
+        System.out.println(messageContent);
         mailServer.send(client.getAddresses(), messageContent);
+
     }
 
 }

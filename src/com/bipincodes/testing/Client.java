@@ -18,4 +18,8 @@ public class Client {
     public void setAddresses(String addresses) {
         this.addresses = addresses;
     }
+
+    public Map<String, String> getTags() {
+        return tags;
+    }
 }
