@@ -18,7 +18,6 @@ public class TemplateEngine {
 
     public String processTemplate(String template, Map<String, String> tags) {
         for (String placeholder : extractPlaceholders(template)) {
-            System.out.println("Extracted : " + placeholder);
             if (!tags.containsKey(placeholder)) {
                 throw new IllegalArgumentException("Missing variable: " + placeholder);
             }
